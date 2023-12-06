@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LevCode.master.cs" Inherits="LevCodMas.LevCode" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>אתר התכנות</title>
+    <link rel="icon" type="image/x-icon" href="/pic/Icon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        html {
+            zoom: 65%;
+            
+        }
+        body {
+            direction: rtl;
+            
+            font-weight: bold;
+            background-color: mintcream;
+            font-family: 'Courier New';
+            
+        }
+
+        td {
+            text-align: center;
+            font-size: 20px;
+            
+        }
+
+    th {
+        background-color: #e3e3e3;
+        font-size: 26px;
+        text-align: center;
+        color: black;
+    }
+    .se 
+    {
+        background-color: #ececec;
+    }
+    .dark-mode {
+        background-image: url(pic/Matt.gif);
+        color: white;
+    }
+    .but {
+        text-align: center;
+        width: 100px;
+        background-color: #78b7c2;
+        border-block-color:  #78b7c2;
+        height: 50px;
+        width: 150px;
+        border-radius: 12px;
+        font-family: 'Courier New';
+        font-size: 18px;
+    }
+    .mess {
+     color: lightpink;
+    }
+    a {
+        text-decoration: none;
+        color: cadetblue;
+    }
+    
+  
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <table style="width: 100%;  border-collapse: collapse;">
+        <tr>
+            <th>Log in</th>
+            <th colspan="6"><a href="P1Home.aspx">אתר התכנות של לב</a></th>
+            <th>Clock</th>
+ 
+        </tr>
+        <tr class="se">
+            <td ><a href="P2Html.aspx">HTML</a></td>
+            <td ><a href="P4Csharp.aspx">C#</td>
+            <td ><a href="P3Python.aspx">Python</a></td>
+            <td  ><a href="P6GamesC.aspx">משחק כימיה</a></td>
+            <td  ><a href="P7GamesPhy.aspx">משחק פיזיקה</a></td>
+            <td  ><a href="P5Odot.aspx">אודות</a></td>
+            <td >כניסת מנהל</td>
+            <td>
+              
+                <button onclick="change()" id="butt" class="but" >Mode</button>
+            </td>
+        </tr>
+        <tr >
+            <td colspan="6">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+            
+        </tr>
+        <tr>
+
+            <td colspan="6" class="mess" id="a"><a href="mailto:levloovmordehai@gmail.com">-- כתבו לנו --</a></td>
+        </tr>
+    </table>
+    <script>
+ 
+        function change() {
+            var element1 = document.body;
+            element1.classList.toggle("dark-mode");
+            var element2 = document.getElementById('bod');
+            element2.classList.toggle("dark-mode");
+           
+        } 
+    </script>
+</body>
+</html>
+
